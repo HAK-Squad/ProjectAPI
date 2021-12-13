@@ -10,10 +10,14 @@ namespace ProjectAPI.Models
 
         [MaxLength(20), Required]
         public string TagNumber { get; set; }
-        public Person Person { get; set; }
+
+        // Navigation property many-to-many relationship with door
+
+        public ICollection<DoorTag> Doors { get; set; }
+
+        // One-to-one relationship with Person
         public int PersonId { get; set; }
-        public Door Door { get; set; }
-        public int DoorId { get; set; }
+        public Person Person { get; set; }
 
     }
 }

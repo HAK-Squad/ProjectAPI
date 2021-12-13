@@ -15,8 +15,7 @@ namespace ProjectAPI.Models
         public string LastName { get; set; }
 
         [MaxLength(20), Required]
-        public string AccessLevel { get; set; }
-        public Door Door { get; set; }
-        public string DoorNumber { get; set; }
+        public string ApertmentNumber { get; set; }
+      
     }
 }
