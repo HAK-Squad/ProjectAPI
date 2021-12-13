@@ -9,5 +9,7 @@ namespace ProjectAPI.Models
 
         [MaxLength(20), Required]
         public string CodeString { get; set; }
+
+        public string CodeDescription { get; set; }
     }
 }

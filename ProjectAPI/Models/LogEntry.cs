@@ -7,20 +7,19 @@ namespace ProjectAPI.Models
     {
         [Key]
         public int LogEntryId { get; set; }
-        public LogEntry()
-        {
-            CreatedOn = DateTime.Now;
-        }
-        public DateTime CreatedOn { get; set; } 
 
+        public DateTime WalkedThroughDoor { get; set; }
+
+
+        public string DoorName { get; set; }
         public Door Door { get; set; }
-        public string DoorNumber { get; set; } 
 
-        public Code Code { get; set; }
         public string CodeString { get; set; }
+        public Code Code { get; set; }
 
-        public Tag Tag { get; set; }
+
         public string TagNumber { get; set; }
+        public Tag Tag { get; set; }
 
     }
 }
