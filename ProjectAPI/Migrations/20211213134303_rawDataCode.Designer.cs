@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectAPI;
 
@@ -11,9 +12,10 @@ using ProjectAPI;
 namespace ProjectAPI.Migrations
 {
     [DbContext(typeof(APIprojectDBcontext))]
-    partial class APIprojectDBcontextModelSnapshot : ModelSnapshot
+    [Migration("20211213134303_rawDataCode")]
+    partial class rawDataCode
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +43,7 @@ namespace ProjectAPI.Migrations
 
                     b.HasKey("CodeId");
 
-                    b.ToTable("Codes", (string)null);
+                    b.ToTable("Codes");
                 });
 
             modelBuilder.Entity("ProjectAPI.Models.Door", b =>
@@ -59,7 +61,7 @@ namespace ProjectAPI.Migrations
 
                     b.HasKey("DoorId");
 
-                    b.ToTable("Doors", (string)null);
+                    b.ToTable("Doors");
                 });
 
             modelBuilder.Entity("ProjectAPI.Models.DoorTag", b =>
@@ -74,7 +76,7 @@ namespace ProjectAPI.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("DoorTags", (string)null);
+                    b.ToTable("DoorTags");
                 });
 
             modelBuilder.Entity("ProjectAPI.Models.LogEntry", b =>
@@ -117,7 +119,7 @@ namespace ProjectAPI.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("LogEntries", (string)null);
+                    b.ToTable("LogEntries");
                 });
 
             modelBuilder.Entity("ProjectAPI.Models.Person", b =>
@@ -145,7 +147,7 @@ namespace ProjectAPI.Migrations
 
                     b.HasKey("PersonId");
 
-                    b.ToTable("People", (string)null);
+                    b.ToTable("People");
                 });
 
             modelBuilder.Entity("ProjectAPI.Models.Tag", b =>
@@ -168,7 +170,7 @@ namespace ProjectAPI.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("Tags", (string)null);
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("ProjectAPI.Models.DoorTag", b =>
