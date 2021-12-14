@@ -38,26 +38,26 @@ namespace ProjectAPI.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'LGH0101'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'BLK0101'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'LGH0102'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'BLK0102'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'LGH0103'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'BLK0103'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'LGH0101'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'BLK0101'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'LGH0102'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'BLK0102'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'LGH0103'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'BLK0103'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'LGH0201'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'BLK0201'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'LGH0202'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'BLK0202'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'LGH0201'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'BLK0201'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'LGH0202'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'BLK0202'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'LGH0301'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'BLK0301'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'LGH0302'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'BLK0302'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'LGH0301'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'BLK0301'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'LGH0302'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'BLK0302'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'SOPRUM'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'UT'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'TVÄTT'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'SOPRUM'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'UT'");
+            migrationBuilder.Sql($"DELETE FROM Doors WHERE DoorName = 'TVÄTT'");
         }
     }
 }
