@@ -47,34 +47,34 @@ namespace ProjectAPI.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0101A'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0101A'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0102A'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0102B'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0102A'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0102B'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0103A'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0103B'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0103A'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0103B'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0201A'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0201B'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0201C'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0201D'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0201A'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0201B'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0201C'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0201D'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0202A'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0202B'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0202C'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0202A'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0202B'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0202C'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0301A'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0301B'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0301C'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0301D'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0301A'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0301B'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0301C'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0301D'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0302A'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0302B'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0302C'");
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = '0302D'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0302A'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0302B'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0302C'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = '0302D'");
 
-            migrationBuilder.Sql($"DELETE FROM Tag WHERE TagNumber = 'VAKT01'");
+            migrationBuilder.Sql($"DELETE FROM Tags WHERE TagNumber = 'VAKT01'");
         }
     }
 }
