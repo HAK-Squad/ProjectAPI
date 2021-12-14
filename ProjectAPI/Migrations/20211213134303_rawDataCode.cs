@@ -23,10 +23,10 @@ namespace ProjectAPI.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql($"DELETE FROM Code WHERE CodeString = 'DÖUT'");
-            migrationBuilder.Sql($"DELETE FROM Code WHERE CodeString = 'DÖIN'");
-            migrationBuilder.Sql($"DELETE FROM Code WHERE CodeString = 'FDIN'");
-            migrationBuilder.Sql($"DELETE FROM Code WHERE CodeString = 'FDUT'");
+            migrationBuilder.Sql($"DELETE FROM Codes WHERE CodeString = 'DÖUT'");
+            migrationBuilder.Sql($"DELETE FROM Codes WHERE CodeString = 'DÖIN'");
+            migrationBuilder.Sql($"DELETE FROM Codes WHERE CodeString = 'FDIN'");
+            migrationBuilder.Sql($"DELETE FROM Codes WHERE CodeString = 'FDUT'");
 
         }
     }
