@@ -32,7 +32,13 @@ namespace ProjectAPI
                 .HasOne(dt => dt.Tag)
                 .WithMany(dt => dt.Doors)
                 .HasForeignKey(dt => dt.TagId);
+           
         }
+
        
+
+            
+
+
     }
 }
