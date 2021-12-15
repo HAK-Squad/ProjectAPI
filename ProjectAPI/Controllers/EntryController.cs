@@ -37,7 +37,7 @@ namespace ProjectAPI.Controllers
         [HttpGet ("byTenant")]
         public List<LogEntry> FindEntriesByTenant(string FirstName)
         {
-            var result = _context.LogEntries.Where(fn => fn.FirstName  == FirstName).ToList();
+            var result = _context.LogEntries.Where(fn => fn.FirstName  == FirstName).Take(20).ToList();
             return result;
         }
 
