@@ -12,14 +12,15 @@ namespace ProjectAPI.Models
 
 
         public string DoorName { get; set; }
-        public Door Door { get; set; }
+        
+        
 
         public string CodeString { get; set; }
-        public Code Code { get; set; }
+        
 
 
         public string TagNumber { get; set; }
-        public Tag Tag { get; set; }
+        
 
         
         public string FirstName { get; set; }
