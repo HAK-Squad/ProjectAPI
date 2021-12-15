@@ -43,5 +43,13 @@ namespace ProjectAPI.Controllers
 
         }
 
+        [HttpGet ("byTag")]
+        public List<LogEntry> FindLogeEntriesByTag(string tagNumber)
+        {
+            var result = _context.LogEntries.Where(le => le.TagNumber == tagNumber).Take(20).ToList();
+            return result;
+            
+        } 
+
     }
 }
