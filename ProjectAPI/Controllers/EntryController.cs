@@ -34,6 +34,12 @@ namespace ProjectAPI.Controllers
             return result;
 
         }
+        [HttpGet ("byTenant")]
+        public List<LogEntry> FindEntriesByTenant(string FirstName)
+        {
+            var result = _context.LogEntries.Where(fn => fn.FirstName  == FirstName).Take(20).ToList();
+            return result;
+        }
 
         [HttpGet("byLocation")] //Since location and door are the same in our database 
         public List<LogEntry> FindEntriesByLocation(string doorName)
