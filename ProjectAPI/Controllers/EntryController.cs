@@ -41,6 +41,21 @@ namespace ProjectAPI.Controllers
             return result;
         }
 
+        [HttpGet("byLocation")] //Since location and door are the same in our database 
+        public List<LogEntry> FindEntriesByLocation(string doorName)
+        {
+            var result = _context.LogEntries.Where(le => le.DoorName == doorName).Take(20).ToList();
+            return result;
+
+        }
+
+        [HttpGet ("byTag")]
+        public List<LogEntry> FindLogeEntriesByTag(string tagNumber)
+        {
+            var result = _context.LogEntries.Where(le => le.TagNumber == tagNumber).Take(20).ToList();
+            return result;
+            
+        } 
 
     }
 }
