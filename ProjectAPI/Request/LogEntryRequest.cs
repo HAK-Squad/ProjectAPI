@@ -7,21 +7,12 @@ namespace ProjectAPI.Request
         public int Id { get; set; }
 
         public DateTime WalkedThroughDoor { get; set; }
-
-
         public string DoorName { get; set; }
         
-        
-
         public string CodeString { get; set; }
      
-
-
-
         public string TagNumber { get; set; }
        
-
-
 
         public string FirstName { get; set; }
 
