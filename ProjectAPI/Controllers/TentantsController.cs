@@ -30,7 +30,7 @@ namespace ProjectAPI.Controllers
         public List<ViewModelsFindTentantsAparments> ListTenantAt(string find)
         {
             var results = (from p in _dbContext.People
-                           join ps in _dbContext.Tags on p.ApertmentNumber equals ps.TagId
+                           join ps in _dbContext.Tags on p.ApertmentNumber equals ps.TagNumber
                            select new ViewModelsFindTentantsAparments()
                            {
                                FindTentantsAparments = p.ApertmentNumber,
