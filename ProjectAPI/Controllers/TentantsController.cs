@@ -26,9 +26,11 @@ namespace ProjectAPI.Controllers
             _dbContext = dbContext;
 
         }
-        [HttpGet("sample")]
-        public List<ViewModelsFindTentantsAparments> ListTenantAt(string find)
+        [HttpGet("byApartmentnumb1")]
+        private  List<ViewModelsFindTentantsAparments> ListTenantAt(string ApartmentNum)
         {
+            
+
             var results = (from p in _dbContext.People
                            join ps in _dbContext.Tags on p.ApertmentNumber equals ps.TagNumber
                            select new ViewModelsFindTentantsAparments()
@@ -43,13 +45,13 @@ namespace ProjectAPI.Controllers
 
 
 
-        [HttpGet("byApartmentnumb")]
+        [HttpGet("byApartmentnumb2")]
         public List<Person> FindTentantsByApartment(string ApartmentNum)
         {
-            var result = _context.People.Where(an => an.ApertmentNumber == ApartmentNum).ToList();
-            //var resultTag = _context.Tags.Where(an => an.TagNumber == ApartmentNum).ToList();
+            var result = _dbContext.People.Where(an => an.ApertmentNumber == ApartmentNum).ToList();
+           
             return result;
-            
+
         }
 
 
