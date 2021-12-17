@@ -1,36 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ProjectAPI.Models;
 
-
-namespace ProjectAPI.Models
+namespace ProjectAPI.Request
 {
-    public class LogEntry // LogEntry from slide 11 contains ("Date", "DoorNumber", "CodeNumber" and "TagNumber")
+    public class LogEntryRequest
     {
-        [Key]
-        public int LogEntryId { get; set; }
+        public int Id { get; set; }
 
         public DateTime WalkedThroughDoor { get; set; }
-
-
         public string DoorName { get; set; }
         
-        
-
         public string CodeString { get; set; }
-        
-
-
+     
         public string TagNumber { get; set; }
-        
+       
 
-        
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
-
-        
-
-
-
-
     }
 }
