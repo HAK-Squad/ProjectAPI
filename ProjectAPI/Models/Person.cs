@@ -16,9 +16,5 @@ namespace ProjectAPI.Models
 
         [MaxLength(20), Required]
         public string ApertmentNumber { get; set; }
-
-        [MaxLength(20)]
-        public string TagNumber { get; set; }
-
     }
 }
