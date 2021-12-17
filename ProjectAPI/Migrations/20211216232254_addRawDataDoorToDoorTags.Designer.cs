@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectAPI;
 
@@ -11,9 +12,10 @@ using ProjectAPI;
 namespace ProjectAPI.Migrations
 {
     [DbContext(typeof(APIprojectDBcontext))]
-    partial class APIprojectDBcontextModelSnapshot : ModelSnapshot
+    [Migration("20211216232254_addRawDataDoorToDoorTags")]
+    partial class addRawDataDoorToDoorTags
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,9 +87,15 @@ namespace ProjectAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LogEntryId"), 1L, 1);
 
+                    b.Property<int>("CodeId")
+                        .HasColumnType("int");
+
                     b.Property<string>("CodeString")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DoorId")
+                        .HasColumnType("int");
 
                     b.Property<string>("DoorName")
                         .IsRequired()
@@ -101,6 +109,9 @@ namespace ProjectAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
                     b.Property<string>("TagNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -109,6 +120,12 @@ namespace ProjectAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("LogEntryId");
+
+                    b.HasIndex("CodeId");
+
+                    b.HasIndex("DoorId");
+
+                    b.HasIndex("TagId");
 
                     b.ToTable("LogEntries");
                 });
@@ -177,6 +194,33 @@ namespace ProjectAPI.Migrations
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Door");
+
+                    b.Navigation("Tag");
+                });
+
+            modelBuilder.Entity("ProjectAPI.Models.LogEntry", b =>
+                {
+                    b.HasOne("ProjectAPI.Models.Code", "Code")
+                        .WithMany()
+                        .HasForeignKey("CodeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectAPI.Models.Door", "Door")
+                        .WithMany()
+                        .HasForeignKey("DoorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectAPI.Models.Tag", "Tag")
+                        .WithMany()
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Code");
 
                     b.Navigation("Door");
 

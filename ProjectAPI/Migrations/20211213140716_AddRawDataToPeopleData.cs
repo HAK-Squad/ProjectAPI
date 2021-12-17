@@ -11,32 +11,33 @@ namespace ProjectAPI.Migrations
             migrationBuilder.Sql(@"
             
 
-            INSERT INTO [dbo].[People] ([FirstName],[LastName],[ApertmentNumber]  )
+            INSERT INTO [dbo].[People] ([FirstName],[LastName],[ApertmentNumber], [TagNumber])
                 VALUES
-                    ('Elias', 'Petterson', '0102'),
-                    ('Wilma', 'Johansson', '0102'),
-                    ('Alicia', 'Sanchez', '0103'),
-                    ('Aaron', 'Sanchez', '0103'),
-                    ('Olivia', 'Erlander', '0201'),
-                    ('William', 'Erlander', '0201'),
-                    ('Alexander', 'Erlander', '0201'),
-                    ('Astrid', 'Erlander', '0201'),
-                    ('Lucas','Adolfsson', '0202'),
-                    ('Ebba','Adolfsson', '0202'),
-                    ('Lilly','Adolfsson', '0202'),
-                    ('Ella','Ahlström', '0301'),
-                    ('Alma','Alfredsson', '0301'),
-                    ('Elsa','Ahlström', '0301'),
-                    ('Maja','Ahlström', '0301'),
-                    ('Noah','Almgren', '0302'),
-                    ('Adam','Andersen', '0302'),
-                    ('Kattis','Backman', '0302'),
-                    ('Oscar','Chen', '0302'),
-                    ('Vaktmästare','Vaktsson', 'VAKT');
+                    ('Liam', 'Jönsson', '0101', '0101A'),
+                    ('Elias', 'Petterson', '0102', '0102A'),
+                    ('Wilma', 'Johansson', '0102', '0102B'),
+                    ('Alicia', 'Sanchez', '0103','0103A'),
+                    ('Aaron', 'Sanchez', '0103', '0103B'),
+                    ('Olivia', 'Erlander', '0201', '0201A'),
+                    ('William', 'Erlander', '0201', '0201B'),
+                    ('Alexander', 'Erlander', '0201', '0201C'),
+                    ('Astrid', 'Erlander', '0201' ,'0201D'),
+                    ('Lucas','Adolfsson', '0202', '0202A'),
+                    ('Ebba','Adolfsson', '0202', '0202B'),
+                    ('Lilly','Adolfsson', '0202', '0202C'),
+                    ('Ella','Ahlström', '0301', '0301A'),
+                    ('Alma','Alfredsson', '0301', '0301B'),
+                    ('Elsa','Ahlström', '0301', '0301C'),
+                    ('Maja','Ahlström', '0301', '0301D'),
+                    ('Noah','Almgren', '0302', '0302A'),
+                    ('Adam','Andersen', '0302', '0302B'),
+                    ('Kattis','Backman', '0302', '0302C'),
+                    ('Oscar','Chen', '0302', '0302D'),
+                    ('Vaktmästare','Vaktsson', 'VAKT', 'VAKT01');
                     
-                    
-                    
-           
+                   
+
+                             
             ");
         }
 
