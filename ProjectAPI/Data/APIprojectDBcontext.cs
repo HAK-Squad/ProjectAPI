@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProjectAPI.Data;
 using ProjectAPI.Models;
 
 
@@ -32,7 +33,12 @@ namespace ProjectAPI
                 .HasOne(dt => dt.Tag)
                 .WithMany(dt => dt.Doors)
                 .HasForeignKey(dt => dt.TagId);
-           
+            //builder.Seed();
+
+          
+
+
+
         }
 
        
