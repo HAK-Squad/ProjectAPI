@@ -11,32 +11,40 @@ namespace ProjectAPI.Migrations
             migrationBuilder.Sql(@"
             
 
-            INSERT INTO [dbo].[People] ([FirstName],[LastName],[ApertmentNumber]  )
+            INSERT INTO [dbo].[People] ([FirstName],[LastName],[ApertmentNumber])
                 VALUES
+                    ('Liam', 'Jönsson', '0101'),
+
                     ('Elias', 'Petterson', '0102'),
                     ('Wilma', 'Johansson', '0102'),
+
                     ('Alicia', 'Sanchez', '0103'),
                     ('Aaron', 'Sanchez', '0103'),
+
                     ('Olivia', 'Erlander', '0201'),
                     ('William', 'Erlander', '0201'),
                     ('Alexander', 'Erlander', '0201'),
                     ('Astrid', 'Erlander', '0201'),
+
                     ('Lucas','Adolfsson', '0202'),
                     ('Ebba','Adolfsson', '0202'),
                     ('Lilly','Adolfsson', '0202'),
+
                     ('Ella','Ahlström', '0301'),
                     ('Alma','Alfredsson', '0301'),
                     ('Elsa','Ahlström', '0301'),
                     ('Maja','Ahlström', '0301'),
+
                     ('Noah','Almgren', '0302'),
                     ('Adam','Andersen', '0302'),
                     ('Kattis','Backman', '0302'),
                     ('Oscar','Chen', '0302'),
+
                     ('Vaktmästare','Vaktsson', 'VAKT');
                     
-                    
-                    
-           
+                   
+
+                             
             ");
         }
 
